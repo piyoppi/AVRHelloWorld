@@ -19,8 +19,8 @@ void interrupt_test() {
   DDRD=0x00;
   OCR0=0xFF;
   PORTB=0b10000000;
-  TCCR0 = 0b00000101;     // TIMER0設定（�E周 = 1024)
-  TIMSK |= 0b00000010;    // TIMER0オーバ�Eフロー割り込み許可
+  TCCR0 = 0b00000101;     // TIMER0 divider = 1024
+  TIMSK |= 0b00000010;    // TIMER0 interrupt settings
   sei();
   while (1) 
   {
